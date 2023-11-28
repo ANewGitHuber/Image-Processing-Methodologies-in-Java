@@ -130,7 +130,8 @@ Description of Steps
 
 See the design document for details.
 
-![image](https://github.com/ANewGitHuber/Image-Processing-Methodologies-in-Java/assets/88078123/1502425f-7f07-4683-a301-eb9b90498981)
+![image](https://github.com/ANewGitHuber/Image-Processing-Methodologies-in-Java/assets/88078123/b08a9370-df2d-4574-b799-4c2e4328a645)
+
 
 Appendix:
 
