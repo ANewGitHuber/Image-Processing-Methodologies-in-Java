@@ -132,4 +132,8 @@ See the design document for details.
 
 ![image](https://github.com/ANewGitHuber/Image-Processing-Methodologies-in-Java/assets/88078123/1502425f-7f07-4683-a301-eb9b90498981)
 
+Appendix:
+
+Class Diagram of the Picture Class:
+![image](https://github.com/ANewGitHuber/Image-Processing-Methodologies-in-Java/assets/88078123/558150db-1ca9-4add-be77-560c0adda100)
 
