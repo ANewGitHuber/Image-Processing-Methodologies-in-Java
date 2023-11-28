@@ -141,4 +141,4 @@ Class Diagram of the Picture Class:
 
 
 @John Chen, 2020. 
-All rights to the source codes are reserved.
+All rights to source codes are reserved.
