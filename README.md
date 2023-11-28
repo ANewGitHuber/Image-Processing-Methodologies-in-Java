@@ -1,6 +1,6 @@
 # Image-Processing-Methodologies-in-Java
 
-Code Description for Image Processing Part_A.java
+## Code Description for Image Processing Part_A.java
 
 ## 1. Picture tilt(Picture picture) 
 
@@ -55,3 +55,38 @@ Note the following important information about the computation:
 - Rounding. When applying a kernel filter, the resulting RGB components may become fractional if the kernel weights are fractional. Round each RGB component to the nearest integer, with ties rounding up, with Math.round() and then casting to int.
 
 - Clamping. When applying a kernel filter, the resulting RGB components may not remain between 0 and 255. If an RGB component of a pixel is less than 0, set it to 0; if is greater than 255, set it to 255.
+
+![image](https://github.com/ANewGitHuber/Image-Processing-Methodologies-in-Java/assets/88078123/4ca6fca4-60e4-4b0e-8737-ad4b57a681c1)
+
+## 3. Picture blur(Picture picture)
+
+### This method blurs a picture by applying the following kernel (one-ninth in a 9-by-9 diagonal matrix).
+
+This means applying the diagonal matrix, and then dividing the result by 9:
+
+![image](https://github.com/ANewGitHuber/Image-Processing-Methodologies-in-Java/assets/88078123/43426ef5-e84f-494d-a909-bd2fe764cb1a)
+
+![image](https://github.com/ANewGitHuber/Image-Processing-Methodologies-in-Java/assets/88078123/b1cbfa55-d27f-40e2-838e-acf95e41193b)
+
+## 4. Picture edge(Picture picture)
+
+### This method performs edge detection of a picture.
+
+First convert the picture into a grayscale picture. You can achieve that by simply calling the static grayScale(picture) method, which is provided as part of the example code, and is similar to the method created in your lab classes.
+
+Picture grayPic = CW3_Example.grayScale(picture);
+
+Next, apply these two kernels to each grayscale component (you only need to do one computation since all three color components of a grayscale picture are the same) of a pixel, the following:
+
+![image](https://github.com/ANewGitHuber/Image-Processing-Methodologies-in-Java/assets/88078123/6df3c82f-c50b-44c8-8a6d-6c1edfae8ec3)
+
+to obtain the value Gx, and the following
+
+![image](https://github.com/ANewGitHuber/Image-Processing-Methodologies-in-Java/assets/88078123/9be292f7-bfd9-4e7f-9e9a-51f2f92f68be)
+
+to obtain the value Gy.
+
+Finally, convert to int with casting and clamp the value ![image](https://github.com/ANewGitHuber/Image-Processing-Methodologies-in-Java/assets/88078123/69ef7996-8618-4ead-844c-293cf7ba08c4), and then set the color of that pixel to 255 – G.
+
+![image](https://github.com/ANewGitHuber/Image-Processing-Methodologies-in-Java/assets/88078123/61acabff-5e05-4310-9f99-f696707ddbdb)
+
