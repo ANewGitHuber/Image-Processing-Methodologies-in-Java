@@ -16,5 +16,6 @@ rowc = 0.5 × (height - 1)
 
 Only copy the pixel if the target pixel is in bounds, so as not to change the dimension of the image. Use black for target pixels with no copied color.
 
-![image](https://github.com/ANewGitHuber/Image-Processing-Methodologies-in-Java/assets/88078123/bc204144-6488-42d6-9d2e-aa931b3ca81e)
+![image](https://github.com/ANewGitHuber/Image-Processing-Methodologies-in-Java/assets/88078123/3ae1c49a-c05f-4cf7-99a5-8c7d28af1179)
+
 
