@@ -1,6 +1,6 @@
 # Image-Processing-Methodologies-in-Java
 
-## Code Description for Image Processing Part_A.java
+### Code Description for Image Processing Part_A.java
 
 ## 1. Picture tilt(Picture picture) 
 
@@ -89,4 +89,47 @@ to obtain the value Gy.
 Finally, convert to int with casting and clamp the value ![image](https://github.com/ANewGitHuber/Image-Processing-Methodologies-in-Java/assets/88078123/69ef7996-8618-4ead-844c-293cf7ba08c4), and then set the color of that pixel to 255 – G.
 
 ![image](https://github.com/ANewGitHuber/Image-Processing-Methodologies-in-Java/assets/88078123/61acabff-5e05-4310-9f99-f696707ddbdb)
+
+
+### Code Description for Image Processing Part_B.java
+
+## 1. Picture positionalTransform(Picture picture) 
+
+### This method performs an infinite-superimposed Graphics Slices.
+
+The Infinite-superimposed Graphics Slices effect bevel-cuts the original image at a specific angle, then stacks the cut images infinitely with distorted and size-shrinking effect. This effect creates a feeling of suspense, dreaming and mystery, especially in screenshots of suspense movies.
+
+Description of Steps: 
+- Create a new black image;
+- Define and calculate the radian of angle between the main diagonal and the left edge – “rad1”;
+- Define the radian of angel between ‘the line between a certain pixel and the upper left corner’ and the left edge – “rad2”;
+- Determine each pixel’s position using rad1 and rad2;
+- For pixels outside the cutting area, throw out of the image range;
+- For pixels inside the cutting area, change location and paste them infinite times with certain formula;
+- After the location changing, for every pixel inside the image range, Copy them into the new black image;
+- Return new image;
+
+See the design document for details.
+
+![image](https://github.com/ANewGitHuber/Image-Processing-Methodologies-in-Java/assets/88078123/033a690a-1fbb-4f04-a541-b9cc41119465)
+
+## 2. Picture colorTransform(Picture picture)
+
+### This method performs a Radar-ray Sketch.
+
+The Radar-ray Sketch effect extract the dark parts and adjust them to corresponding green tone, as well as extract the bright parts and adjust them to corresponding black tone. This effect creates a sense of watching through radar.
+
+Description of Steps
+- Grayscale the image;
+- Create a new transparent image;
+- Use nested loops to extract the adjacent nine pixels’ color centered on any pixel in the image, simultaneously discuss every edge pixel using if and else if statement;
+- Use kernel filter formula to calculate the new RGB components of each pixel according to the colors of the adjacent nine pixels. The key is to set red and blue RGB component at a low rate and green RGB component at a high rate;
+- Guarantee the new RGB component of each pixel at the range of 0~255;
+- Copy every pixel into the new image;
+- Return new image;
+
+See the design document for details.
+
+![image](https://github.com/ANewGitHuber/Image-Processing-Methodologies-in-Java/assets/88078123/1502425f-7f07-4683-a301-eb9b90498981)
+
 
