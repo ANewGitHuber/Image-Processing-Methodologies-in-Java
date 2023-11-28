@@ -130,13 +130,13 @@ Description of Steps
 
 See the design document for details.
 
-![image](https://github.com/ANewGitHuber/Image-Processing-Methodologies-in-Java/assets/88078123/b08a9370-df2d-4574-b799-4c2e4328a645)
+![image](https://github.com/ANewGitHuber/Image-Processing-Methodologies-in-Java/assets/88078123/6639ba35-e16e-4dbe-95f3-ee462cd8e255)
 
 
 Appendix:
 
 Class Diagram of the Picture Class:
-![image](https://github.com/ANewGitHuber/Image-Processing-Methodologies-in-Java/assets/88078123/c12380ac-efdc-41d1-b16b-52c7a8d1e514)
+![image](https://github.com/ANewGitHuber/Image-Processing-Methodologies-in-Java/assets/88078123/b08a9370-df2d-4574-b799-4c2e4328a645)
 
 
 
