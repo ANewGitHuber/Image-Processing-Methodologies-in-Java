@@ -136,7 +136,9 @@ See the design document for details.
 Appendix:
 
 Class Diagram of the Picture Class:
+
 ![image](https://github.com/ANewGitHuber/Image-Processing-Methodologies-in-Java/assets/88078123/b08a9370-df2d-4574-b799-4c2e4328a645)
 
 
-
+@John Chen, 2020. 
+All rights to the source codes are reserved.
