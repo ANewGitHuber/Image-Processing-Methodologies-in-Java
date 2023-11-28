@@ -2,7 +2,7 @@
 
 Code Description for Image Processing Part_A.java
 
-1. Method Picture tilt(Picture picture) tilts a picture by rotating the picture 30 degrees clockwise.
+## 1. Method Picture tilt(Picture picture) tilts a picture by rotating the picture 30 degrees clockwise.
 
 To rotate a picture by θ radians counterclockwise, it copies the color of each pixel (cols, rows) in the source picture to a target pixel (colt, rowt) whose coordinates (in int) are given by the following formulas:
 
