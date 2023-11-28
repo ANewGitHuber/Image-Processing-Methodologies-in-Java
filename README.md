@@ -22,4 +22,36 @@ Only copy the pixel if the target pixel is in bounds, so as not to change the di
 
 ![image](https://github.com/ANewGitHuber/Image-Processing-Methodologies-in-Java/assets/88078123/3ae1c49a-c05f-4cf7-99a5-8c7d28af1179)
 
+## 2. Picture emboss(Picture picture)
 
+### This method adds an emboss style effect to a picture by applying the following kernel.
+
+![image](https://github.com/ANewGitHuber/Image-Processing-Methodologies-in-Java/assets/88078123/e6bac862-6aff-4864-a3a5-fe6fc7b121a5)
+
+A kernel filter modifies the pixels in a picture by replacing each pixel with a linear combination of its neighboring pixels and itself. The matrix that characterizes the linear combination is known as the kernel.
+
+Specifically, to apply a kernel filter to a picture, perform the following operation for each RGB components of each pixel p separately:
+ Align the center of the kernel on pixel p.
+
+ The new component value of pixel p is obtained by multiplying each kernel element with the corresponding component value, and adding the results.
+After that, combine the results to get the new color.
+
+For example, to apply an emboss kernel filter to the middle Red component value of 50 of a pixel on some part of a picture:
+
+![image](https://github.com/ANewGitHuber/Image-Processing-Methodologies-in-Java/assets/88078123/c5874da0-88e3-49c7-a1b5-4c82c2ffdef6)
+
+we compute the new value to be
+
+= (-2)10 + (-1)20 + (0)30 + (-1)40 + (1)50 + (1)40 + (0)10 + (1)20 + (2)30 = 90.
+
+We then combine that with the similar computation on the Green and Blue components to obtain the new color of the corresponding pixel.
+
+Note the following important information about the computation:
+
+- Periodic boundary conditions. When applying a kernel filter to a pixel near the boundary, some of its neighboring pixels may not exist. In such cases, assume the leftmost column wraps around to the rightmost column, and vice versa; and the top row wraps around to the bottom row, and vice versa. For example:
+
+![image](https://github.com/ANewGitHuber/Image-Processing-Methodologies-in-Java/assets/88078123/0c69e420-cf3c-496c-aaba-ac02a3f3895b)
+
+- Rounding. When applying a kernel filter, the resulting RGB components may become fractional if the kernel weights are fractional. Round each RGB component to the nearest integer, with ties rounding up, with Math.round() and then casting to int.
+
+- Clamping. When applying a kernel filter, the resulting RGB components may not remain between 0 and 255. If an RGB component of a pixel is less than 0, set it to 0; if is greater than 255, set it to 255.
